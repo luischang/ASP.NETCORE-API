@@ -3,6 +3,7 @@ using M5_NETCORE.CORE.DTOs;
 using M5_NETCORE.CORE.Entities;
 using M5_NETCORE.CORE.Exceptions;
 using M5_NETCORE.CORE.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace M5_NETCORE.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
